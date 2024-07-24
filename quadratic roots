@@ -1,0 +1,25 @@
+
+public class roots{
+	public static void main(String[] args){
+		double a=1,b=-4,c=7,d,root1,root2;
+		d=(b*b-4*a*c);
+		if(d>0){
+			root1=(-b+Math.sqrt(d))/2*a;
+			root2=(-b-Math.sqrt(d))/2*a;
+			System.out.println(root1+ "  " +root2);
+			System.out.println("roots are real and distinct");
+		}
+		else if(d==0){
+			root1=(-b+Math.sqrt(d))/2*a;
+			root2=(-b-Math.sqrt(d))/2*a;
+			System.out.println(root1 + "  "+root2);
+			System.out.println("roots are equal");
+		}
+		else {
+			root1=(-b+Math.sqrt(d))/2*a;
+			root2=(-b-Math.sqrt(d))/2*a;
+			System.out.println(-b/(2*a) + "+i" +  d/(2*a) +"  " +  -b/(2*a) + "-i" + d/(2*a));
+			System.out.println("roots are imaginary");
+		}
+	}	
+}
