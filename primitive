@@ -1,0 +1,14 @@
+public class primitive{
+	static int Int;
+	static boolean Boolean;
+	static short Short;
+	static long Long;
+	static float Float;
+	public static void main(String[] args){
+		System.out.println("int:"+Int);
+		System.out.println("boolean:"+Boolean);
+		System.out.println("short:"+Short);
+		System.out.println("long:"+Long);
+		System.out.println("float:"+Float);
+	}
+}
