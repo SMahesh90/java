@@ -1,0 +1,37 @@
+interface vehicle{
+    public void start();
+    public void stop();
+    default void horn(){
+        System.out.println("It Horns !");
+    }
+}
+class car implements vehicle{
+    public void start(){
+        System.out.println("Car starts");
+    }
+    public void stop(){
+        System.out.println("Car stops");
+    }
+    
+}
+ class bike implements vehicle{
+    public void start(){
+        System.out.println("bike starts");
+    }
+    public void stop(){
+        System.out.println("bike stops");
+    }
+    
+}
+public class Main{
+    public static void main(String [] args){
+        car c = new car();
+        c.start();
+        c.stop();
+        c.horn();
+        bike b = new bike();
+        b.start();
+        b.stop();
+        b.horn();
+    }
+}
