@@ -1,0 +1,80 @@
+import java.util.*;
+interface calculator{
+    double calculate();
+}
+class Add implements calculator{
+    double a;
+    double b;
+    Add(double a,double b){
+        this.a = a;
+        this.b = b;
+    }
+    public double calculate(){
+        return a+b;
+    }
+}
+class Subtract implements calculator{
+    double a;
+    double b;
+    Subtract(double a,double b){
+        this.a = a;
+        this.b = b;
+    }
+    public double calculate(){
+        return a-b;
+    }
+}
+class Multiplication implements calculator{
+    double a;
+    double b;
+    Multiplication(double a,double b){
+        this.a = a;
+        this.b = b;
+    }
+    public double calculate(){
+        return a*b;
+    }
+}
+class Division implements calculator{
+    double a;
+    double b;
+    Division(double a,double b){
+        this.a = a;
+        this.b = b;
+    }
+    public double calculate(){
+        return a/b;
+    }
+}
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the value of a = ");
+        double a = sc.nextDouble();
+        System.out.print("Enter the value of b = ");
+        double b = sc.nextDouble();
+        Add x = new Add(a,b);
+        System.out.println("Addition = "+x.calculate());
+       // x.calculate();
+        Subtract s = new Subtract(a,b);
+        System.out.println("Subtraction = "+s.calculate());
+       // s.calculate();
+        Multiplication m = new Multiplication(a,b);
+        System.out.println("Multiplication = "+m.calculate());
+        //m.calculate();
+        Division d = new Division(a,b);
+        System.out.println("Division = "+d.calculate());
+        //d.calculate();
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
