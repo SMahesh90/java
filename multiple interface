@@ -12,7 +12,7 @@ class duck implements flyable,swimmable{
         System.out.println("Duck can swim");
     }
 }
-public class MultipleInheritance{
+public class MultipleInterface{
     public static void main(String[] args){
         duck d = new duck();
         d.fly();
