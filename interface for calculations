@@ -55,16 +55,12 @@ public class Main{
         double b = sc.nextDouble();
         Add x = new Add(a,b);
         System.out.println("Addition = "+x.calculate());
-       // x.calculate();
         Subtract s = new Subtract(a,b);
         System.out.println("Subtraction = "+s.calculate());
-       // s.calculate();
         Multiplication m = new Multiplication(a,b);
         System.out.println("Multiplication = "+m.calculate());
-        //m.calculate();
         Division d = new Division(a,b);
         System.out.println("Division = "+d.calculate());
-        //d.calculate();
     }
 }
 
