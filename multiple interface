@@ -1,0 +1,21 @@
+interface flyable{
+    void fly();
+}
+interface swimmable{
+    void swim();
+}
+class duck implements flyable,swimmable{
+    public void fly(){
+        System.out.println("Duck can fly");
+    }
+    public void swim(){
+        System.out.println("Duck can swim");
+    }
+}
+public class MultipleInheritance{
+    public static void main(String[] args){
+        duck d = new duck();
+        d.fly();
+        d.swim();
+    }
+}
