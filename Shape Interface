@@ -1,0 +1,53 @@
+import java.util.Scanner;
+interface shape{
+    double getArea();
+}
+class Rectangle implements shape{
+    double l;
+    double b;
+    Rectangle(double l,double b){
+        this.l = l;
+        this.b = b;
+    }
+    public double getArea(){
+        return l*b;
+    }
+}
+class square implements shape{
+    double a;
+    square(double a){
+        this.a = a;
+    }
+    public double getArea(){
+        return a*a;
+    }
+}
+class circle  implements shape{
+    double r;
+    circle(double r){
+        this.r = r;
+    }
+    public double getArea(){
+        return 3.14*r*r;
+    }
+}
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter l = ");
+        double l = sc.nextDouble();
+        System.out.print("Enter b = ");
+        double b = sc.nextDouble();
+        Rectangle re = new Rectangle(l,b);
+        System.out.println("Area of Rectangle = "+ re.getArea());
+        System.out.print("Enter a = ");
+        double a = sc.nextDouble();
+        square s = new square(a);
+        System.out.println("Area of Square = " + s.getArea());
+        System.out.print("Enter r = ");
+        double r = sc.nextDouble();
+        circle c = new circle(r);
+        System.out.println("Area of Circle = " + c.getArea());
+    }
+}
+
