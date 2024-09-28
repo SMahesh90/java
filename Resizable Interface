@@ -1,0 +1,49 @@
+import java.util.*;
+interface Resizable{
+    int resizeWidth();
+    int resizeHeight();
+}
+class Rectangle implements Resizable{
+    int w1;
+    int h1;
+    int h;
+    int w;
+    Rectangle(int w1,int h1,int h,int w){
+        this.w1 = w1;
+        this.h1 = h1;
+        this.h = h;
+        this.w = w;
+    }
+    
+    public int resizeWidth(){
+        return w+w1;
+    }
+    public int resizeHeight(){
+        return h+h1;
+    }
+}
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter w1 Original width= ");
+        int w1 = sc.nextInt();
+        System.out.print("Enter h1 Original height = ");
+        int h1 = sc.nextInt();
+        System.out.print("Enter w resize width= ");
+        int w = sc.nextInt();
+        System.out.print("Enter h  resize height= ");
+        int h = sc.nextInt();
+        Rectangle r = new Rectangle (w1,h1,h,w);
+        System.out.println("Resized width = " + r.resizeWidth());
+        System.out.println("Resized height = " + r.resizeHeight());
+    }
+}
+
+
+
+
+
+
+
+
+
