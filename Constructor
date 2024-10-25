@@ -1,0 +1,23 @@
+import java.util.Scanner;
+class rectangle{
+    double l;
+    double b;
+    rectangle(double l,double b){
+        this.l = l;
+        this.b = b;
+    }
+    public double Area(){
+        return l*b;
+    }
+}
+public class Constructor{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("l = ");
+        int l = sc.nextInt();
+        System.out.print("b = ");
+        int b = sc.nextInt();
+        rectangle r = new rectangle(l,b);
+        System.out.println("Area of rectangle = " + r.Area());
+    }
+}
