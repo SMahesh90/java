@@ -1,0 +1,31 @@
+public class Insert{
+	public static void InsertionSort(int[] a){
+		int k = 0;
+		int n = a.length;
+		for (int i=1; i<n;i++){
+			k = a[i];
+			for(int j=i-1;j>=0 && a[j]>k;j--){
+				a[j+1] = a[j];
+			}
+			a[j+1] = k;	
+		}
+			
+	}	
+	public static void main(String[] args){
+		
+		int a[] = {8,53,4,8,1,2,6,5};
+		
+		System.out.println("\nElements before sorting:");
+		for (int i=0;i<a.length;i++){
+			System.out.print(a[i]+" ");
+		}
+		
+		InsertionSort(a);
+		
+		System.out.println("\nElements after sorting: ");
+		for (int i=0;i<a.length;i++){
+			System.out.println(a[i]+" ");
+		}
+	}
+}
+
