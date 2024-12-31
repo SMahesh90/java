@@ -1,0 +1,41 @@
+import java.util.*;
+class SelectionSort{
+	public int selection(int a[],int n){
+		for(int i=0; i<=n-2; i++){
+			int minpos=i;
+			for(int j=i+1; j<=n-1; j++){
+				if(a[j]<a[minpos]){
+					minpos=j;
+				}
+			}
+			int temp=a[i];
+			a[i]=a[minpos];
+			a[minpos]=temp;
+		}
+	return 0;
+	}
+}
+public class Selection{
+	public static void main(String args[]){
+		Scanner sc = new Scanner(System.in);
+		SelectionSort obj = new SelectionSort();
+		System.out.println("Enter the n: ");
+		int n = sc.nextInt();
+		int arr[] = new int[n];
+		System.out.println("Enter the elements in array: ");
+		for(int i=0; i<n; i++){
+			arr[i]=sc.nextInt();
+		}
+		System.out.println("Elements before sorting : ");
+		for(int j=0; j<n; j++){
+			
+			System.out.print(arr[j]+" ");
+		}
+		obj.selection(arr,n);
+		System.out.println("\nElements after sorting : ");
+		for(int k=0; k<n; k++){
+			System.out.print(arr[k]+" ");
+		}
+		System.out.println();
+	}
+}
