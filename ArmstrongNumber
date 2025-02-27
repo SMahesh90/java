@@ -1,0 +1,24 @@
+import java.util.*;
+
+public class ArmstrongNum {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the number: ");
+        int n = sc.nextInt();
+        int originalNumber = n;
+        int m = String.valueOf(n).length();
+        int sum = 0;
+
+        while (n > 0) {
+            int digit = n % 10;
+            sum += Math.pow(digit, m);
+            n = n / 10;
+        }
+
+        if (sum == originalNumber) {
+            System.out.println("Given number is an Armstrong Number.");
+        } else {
+            System.out.println("Given number is not an Armstrong Number.");
+        }
+    }
+}
