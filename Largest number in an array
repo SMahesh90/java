@@ -1,0 +1,27 @@
+import java.util.*;
+public class Main{
+    public static int Largest(int []arr){
+        int n = arr.length;
+        int largest = arr[0];
+        for (int i=0;i<n;i++){
+            if (arr[i]>largest){
+                largest= arr[i];
+            }
+        }
+        return largest;
+    }
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the size of the array: ");
+        int m = sc.nextInt();
+        int arr[] = new int[m];
+        System.out.println("Enter the elements in the array ");
+        for (int i=0;i<m;i++){
+            System.out.printf("Enter the %d element: ",i);
+            arr[i] = sc.nextInt();
+        }
+        Main ob = new Main();
+        System.out.println("The largest element in array: " + ob.Largest(arr)
+        );
+    }
+}
