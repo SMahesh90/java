@@ -1,0 +1,49 @@
+import java.util.*;
+
+public class SecondLargestSecondSmallest {
+    public static int secondlargest(int []arr, int n){
+        int largest = arr[0];
+        int slargest = -1;
+        n = arr.length;
+        for (int i=0;i<n;i++){
+            if (arr[i] > largest){
+                
+                slargest = largest;
+                largest = arr[i];
+            }
+            else if (arr[i] < largest && arr[i] > slargest){
+                slargest = arr[i];
+            }
+        }
+        return slargest;
+    }
+    public static int secondsmallest(int []arr, int n){
+        int smallest = arr[0];
+        int ssmallest = Integer.MAX_VALUE;
+        for (int i=0 ; i<n ; i++){
+            if (arr[i] < smallest){
+                ssmallest = smallest;
+                smallest = arr[i];
+            }
+            else if (arr[i] != smallest && arr[i] < ssmallest){
+                ssmallest = arr[i];
+            }
+        }
+        return smallest;
+    }
+    public static void main(String[] args) {
+        
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the size of the array: ");
+        int m = sc.nextInt();
+        int arr[] = new int[m];
+        System.out.println("Enter the elements in array:");
+        for (int j=0;j<m;j++){
+            System.out.printf("Enter the %d element: ",j);
+            arr[j] = sc.nextInt();
+        }
+        SecondLargestSecondSmallest ob = new SecondLargestSecondSmallest();
+        System.out.println("Second Largest element: " + ob.secondlargest(arr, m));
+        System.out.println("Second Smallest element: " + ob.secondsmallest(arr,m));
+    }
+}
